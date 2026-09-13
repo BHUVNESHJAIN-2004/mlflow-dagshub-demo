@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+import dagshub
+dagshub.init(repo_owner='bhuvneshjain2004', repo_name='mlflow-dagshub-demo', mlflow=True)
 
 # Load the iris dataset
 iris = load_iris()
@@ -21,7 +23,7 @@ max_depth = 1
 # Start an MLflow run
 
 # this is called context manager in python we use it because we doing start run and without it's use we need to  write end_run but by it's use we don't need to write end_run
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("https://dagshub.com/bhuvneshjain2004/mlflow-dagshub-demo.mlflow")
 mlflow.set_experiment("iris-dt")
 with mlflow.start_run():
 
