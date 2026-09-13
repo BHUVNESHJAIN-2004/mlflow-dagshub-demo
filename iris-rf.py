@@ -24,7 +24,7 @@ n_estimators=100
 
 # this is called context manager in python we use it because we doing start run and without it's use we need to  write end_run but by it's use we don't need to write end_run
 mlflow.set_tracking_uri("https://dagshub.com/bhuvneshjain2004/mlflow-dagshub-demo.mlflow")
-mlflow.set_experiment("iris-dt")
+mlflow.set_experiment("iris-rf")
 with mlflow.start_run():
 
     rf = RandomForestClassifier(max_depth=max_depth,n_estimators=n_estimators)
